@@ -1,47 +1,36 @@
 import { useState } from 'react'
 import { Saludo } from './components/Saludo'
-import logo from './logo.svg'
 import './App.css';
+
 function App() {
   
- const nombre = 'pepito';
- const edad = 65;
- const civil = true;
+ 
 
- const nombre2 = 'juanito';
- const edad2 = 35;
- const civil2 = false;
+ const persona1 = { nombre: 'pepito', edad: 65, civil: true}
+ const persona2 = { nombre: 'juanito', edad: 35, civil: false}
+ const persona3 = { nombre: 'laura', edad: 45, civil: true}
+
+//  console.log('persona')
+//  console.log(persona1.amigos);
 
   return (
     <div className="App">
       <Saludo 
-       name={nombre}
-       edad={edad}
-       estado={civil}
-       madre={'susanita'}
+       persona={persona1}
 
       />
-
-     
 
       <h1>mi app</h1>
       <p> hola mundo </p>
 
       <Saludo 
-       name={nombre2}
-       edad={edad2}
-       estado={civil2}
-       madre={'emilia'}
+      persona={persona2}
       />
       <h3>
         otro componente
       </h3>
       <Saludo 
-       name={'Laura'}
-       edad={65}
-       estado={true}
-       madre={'no tiene nombre'}
-
+        persona={persona3}
       />
     </div>
   )
